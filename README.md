@@ -23,6 +23,7 @@ Powered by Google Apps Script to integrate program
 # Formatting and settings
 We need to formate the spreadsheet such as :
 - Column A-C and E (Date, Start, End, and Reminder Time coloumn) will be formatted as 'text'
+- The date format is should be yyyy-mm-dd. The code will not work if you set the fomat into anything else.
 - Add drop down into coloumn D / Reminder (Yes, No). You can leave this blank.
 - The value of coloumn F (Repeat) is Daily, Weekly, Monthly. You can leave this blank.
 - The value of Time Repeat is > 0. If you fill with 0 it will repeat the event/schedule for indefinetely. You can leave this blank.
