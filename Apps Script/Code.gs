@@ -72,8 +72,13 @@ function createCalendarEvents() {
       
       // Validate date and time
       if (isNaN(startDateTime.getTime()) || isNaN(endDateTime.getTime())) {
-        sheet.getRange(rowIndex, 10).setValue('Gagal: Format Tanggal/Waktu tidak valid');
+        sheet.getRange(rowIndex, 10).setValue('Failed: Format Date/Time format is invalid');
         continue;
+      }
+      
+      // Automate to adding date +1 when the event end in the next day
+      if (endDateTime <= startDateTime) {
+        endDateTime.setDate(endDateTime.getDate() + 1);
       }
 
       var event;
